@@ -1,0 +1,33 @@
+# 基础风格：Google
+BasedOnStyle: Google
+Language: Cpp
+
+# 缩进与空格
+IndentWidth: 2              # 缩进宽度为2空格（Google风格默认4，此处按常见需求调整为2）
+TabWidth: 2                 # Tab宽度等同缩进
+UseTab: Never               # 不使用Tab，用空格缩进
+AccessModifierOffset: -2    # 访问修饰符（public/private）偏移量（对齐到缩进）
+
+# 括号换行规则（BraceWrapping）
+BraceWrapping:
+  AfterClass: true          # 类定义后换行
+  AfterFunction: true       # 函数定义后换行
+  AfterStruct: true         # 结构体定义后换行
+  AfterUnion: true          # 联合体定义后换行
+  AfterEnum: true           # 枚举定义后换行
+  BeforeElse: true          # else前换行
+  IndentBraces: false       # 不额外缩进大括号
+
+# 代码紧凑性控制
+AllowShortIfStatementsOnASingleLine: false  # 禁止单行if语句
+AllowShortLoopsOnASingleLine: false         # 禁止单行循环
+AllowShortCaseLabelsOnASingleLine: true     # 允许单行case标签
+AllowShortFunctionsOnASingleLine: Inline    # 仅允许内联函数单行
+ColumnLimit: 80             # 每行最大长度（Google风格标准）
+
+# 其他关键选项
+AlignAfterOpenBracket: Align   # 括号内对齐
+AlignConsecutiveAssignments: false  # 不连续对齐赋值符号
+AlignTrailingComments: true    # 对齐行尾注释
+BreakBeforeBraces: Custom      # 自定义大括号换行规则（需配合BraceWrapping）
+SortIncludes: true             # 自动排序#include
