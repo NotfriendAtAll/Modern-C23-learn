@@ -11,7 +11,7 @@
 [![Memory Safe](https://img.shields.io/badge/Memory-Safe-yellow.svg?style=for-the-badge&logo=rust&logoColor=white)](https://github.com/your-repo/lsm)
 
 ## 📋 Overview
-本笔记旨在帮助你系统学习 C23（ISO/IEC 9899:2023）标准的新特性及其用法，适合有 C 语言基础的开发者。以下都是本人学习的 C23 笔记。
+本笔记旨在帮助你系统学习 C23（ISO/IEC 9899:2023）标准的新特性及其用法，适合有 C 语言基础的开发者。以下都是本人学习的 C23 笔记,注意笔记是UTF-8编码,如果你是gbk编码的,请自行转换
 
 ## ✨ Features
 
