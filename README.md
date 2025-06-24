@@ -88,8 +88,7 @@ cd Modern-C23-learn
 
 ### 构建项目
 
-<details>
-<summary>🔨 使用 CMake + Ninja (推荐)</summary>
+使用 CMake + Ninja (推荐)
 
 ```bash
 # 配置构建
