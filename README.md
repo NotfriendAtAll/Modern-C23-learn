@@ -1,176 +1,270 @@
-[TOC]
-# Modern-C23-learn
-# C23 学习笔记
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/your-repo/lsm)
-[![C Standard](https://img.shields.io/badge/C-23-blue.svg?style=for-the-badge&logo=c&logoColor=white)](https://en.cppreference.com/w/c/23)
-[![Compiler](https://img.shields.io/badge/GCC-14.2-red.svg?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
-[![Platform](https://img.shields.io/badge/Linux-x86__64-orange.svg?style=for-the-badge&logo=linux&logoColor=white)](https://www.kernel.org/)
-[![License](https://img.shields.io/badge/License-GNU-green.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
-[![Tests](https://img.shields.io/badge/Tests-100%25_Pass-success.svg?style=for-the-badge&logo=checkmarx&logoColor=white)](https://github.com/your-repo/lsm)
-[![Code Quality](https://img.shields.io/badge/Quality-A+-blueviolet.svg?style=for-the-badge&logo=codacy&logoColor=white)](https://github.com/your-repo/lsm)
-[![Memory Safe](https://img.shields.io/badge/Memory-Safe-yellow.svg?style=for-the-badge&logo=rust&logoColor=white)](https://github.com/your-repo/lsm)
+# Modern C23 学习笔记 🚀
 
-## 📋 Overview
-本笔记旨在帮助你系统学习 C23（ISO/IEC 9899:2023）标准的新特性及其用法，适合有 C 语言基础的开发者。以下都是本人学习的 C23 笔记,注意笔记是UTF-8编码,如果你是gbk编码的,请自行转换
+<div align="center">
+
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/NotfriendAtAll/Modern-C23-learn)
+[![C Standard](https://img.shields.io/badge/C-23-blue.svg?style=for-the-badge&logo=c&logoColor=white)](https://en.cppreference.com/w/c/23)
+[![Compiler](https://img.shields.io/badge/GCC-14.2+-red.svg?style=for-the-badge&logo=gnu&logoColor=white)](https://gcc.gnu.org/)
+[![Platform](https://img.shields.io/badge/Linux-x86__64-orange.svg?style=for-the-badge&logo=linux&logoColor=white)](https://www.kernel.org/)
+
+[![License](https://img.shields.io/badge/License-GPL_v3.0-green.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
+[![Tests](https://img.shields.io/badge/Tests-100%25_Pass-success.svg?style=for-the-badge&logo=checkmarx&logoColor=white)](https://github.com/NotfriendAtAll/Modern-C23-learn)
+[![Code Quality](https://img.shields.io/badge/Quality-A+-blueviolet.svg?style=for-the-badge&logo=codacy&logoColor=white)](https://github.com/NotfriendAtAll/Modern-C23-learn)
+[![Memory Safe](https://img.shields.io/badge/Memory-Safe-yellow.svg?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/NotfriendAtAll/Modern-C23-learn)
+
+**探索 C23 标准的现代化特性与最佳实践**
+
+[快速开始](#-quick-start) • [特性介绍](#-features) • [工具推荐](#-recommended-tools) • [学习路径](#-learning-path) • [贡献指南](#-contributing)
+
+</div>
+
+---
+
+## 📋 概述
+
+本项目是一个全面的 C23（ISO/IEC 9899:2023）学习笔记，专为有 C 语言基础的开发者设计。涵盖了 C23 的所有新特性、现代化编程实践以及推荐的开发工具链。
+
+> 💡 **注意**: 本项目使用 UTF-8 编码，如需 GBK 编码请自行转换
 
 ## ✨ Features
 
-- 🚀 **Modern C23**: Leveraging the latest C standard features
-- 🔧 **GCC Optimized**: Built and tested with GCC 14.2+
-- 🐧 **Linux Native**: Optimized for Linux x86_64 systems
-- 🛡️ **Memory Safe**: Rigorous memory management practices
-- ✅ **100% Tested**: Comprehensive test coverage
+<table>
+<tr>
+<td>
 
+### 🚀 **现代化 C23**
+- 最新 C23 标准特性详解
+- 实用代码示例与最佳实践
+- 性能优化技巧
 
-## 🛠️ Requirements
+</td>
+<td>
 
-- **Compiler**: GCC 14.2+ (C23 support required)
-- **Platform**: Linux x86_64
-- **Build System**: Make/CMake/Ninja
-- **Dependencies**: Standard C library
+### 🔧 **工具链优化**
+- GCC 14.2+ 编译器支持
+- 现代构建系统集成
+- 静态分析工具配置
+
+</td>
+</tr>
+<tr>
+<td>
+
+### 🛡️ **安全编程**
+- 内存安全编程实践
+- 缓冲区溢出防护
+- 静态分析与 Sanitizer 集成
+
+</td>
+<td>
+
+### 🧪 **测试驱动**
+- 100% 测试覆盖率
+- 单元测试框架集成
+- 持续集成配置
+
+</td>
+</tr>
+</table>
+
+## 🛠️ 系统要求
+
+| 组件 | 最低版本 | 推荐版本 | 说明 |
+|------|----------|----------|------|
+| **编译器** | GCC 13.0 | GCC 14.2+ | 完整 C23 支持 |
+| **操作系统** | Linux 4.0+ | Ubuntu 22.04+ | x86_64 架构 |
+| **构建工具** | Make 4.0 | Ninja 1.10+ | 高效构建系统 |
+| **调试器** | GDB 10.0 | GDB 14.0+ | 调试支持 |
 
 ## 🚀 Quick Start
 
+### 克隆项目
+
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/NotfriendAtAll/Modern-C23-learn.git
-cd src/src-...
-
-# Build the project
-cmake -G Ninja -B build
-cd build
-# Run tests
-ninja
-./modern_c
-```
-## 📄 License
-**GUN General Public License v3.0**
-
-
----
-
-## 目录
-
-- [C23 概述](#c23-概述)
-- [新关键字与语法](#新关键字与语法)
-- [标准库更新](#标准库更新)
-- [类型系统增强](#类型系统增强)
-- [预处理器改进](#预处理器改进)
-- [诊断与静态分析](#诊断与静态分析)
-- [兼容性与移植性](#兼容性与移植性)
-- [参考资料](#参考资料)
-
----
-
-## C23 概述
-
-C23 是 C 语言的最新标准，对 C17 进行了若干改进，主要包括语法增强、标准库扩展、类型系统优化等。其目标是提升开发效率、代码安全性和可移植性。
-
----
-
-## 新关键字与语法
-
-### 1. `nullptr` 引入
-
-C23 引入了 `nullptr`，表示空指针（与 C++ 保持一致）：
-
-```c
-int *p = nullptr;
+cd Modern-C23-learn
 ```
 
-### 2. `typeof` 关键字标准化
+### 构建项目
 
-允许使用 `typeof(expr)` 获取表达式类型：
+<details>
+<summary>🔨 使用 CMake + Ninja (推荐)</summary>
 
-```c
-typeof(1.2 + 3) x = 5.0;
+```bash
+# 配置构建
+cmake -G Ninja -B build -DCMAKE_BUILD_TYPE=Release
+
+# 编译
+cmake --build build
+
+# 运行测试
+ctest --test-dir build --output-on-failure
+```
+</details>
+### 运行示例
+
+```bash
+# 运行主程序
+./build/modern_c23
+
+# 运行特定示例
+./build/examples/c23_features
+./build/examples/memory_safety
 ```
 
-### 3. `static_assert` 改进
+## 📚 学习目录
 
-`static_assert` 可用于文件作用域：
+### 🏗️ 核心特性
 
-```c
-static_assert(sizeof(int) == 4, "int 必须为 4 字节");
+- [**C23 概述**](docs/overview.md) - 标准变化与改进概览
+- [**新关键字与语法**](docs/syntax.md) - `typeof`、`BitInt`、`decimal` 等
+- [**类型系统增强**](docs/types.md) - 类型推导与泛型编程
+- [**标准库更新**](docs/stdlib.md) - 新增函数与改进
+
+### 🔧 进阶主题
+
+- [**预处理器改进**](docs/preprocessor.md) - `#embed`、`#warning` 等
+- [**诊断与静态分析**](docs/diagnostics.md) - 属性与检查工具
+- [**内存安全编程**](docs/memory_safety.md) - 安全编程实践
+- [**性能优化**](docs/performance.md) - 编译器优化技巧
+
+### 🛠️ 工具与实践
+
+- [**开发环境配置**](docs/development_setup.md) - IDE 与工具链配置
+- [**测试与调试**](docs/testing_debugging.md) - 单元测试与调试技巧
+- [**兼容性指南**](docs/compatibility.md) - 移植性与向后兼容
+
+## 🧰 推荐工具
+
+### 编译器与构建工具
+
+| 工具 | 用途 | 安装命令 |
+|------|------|----------|
+| **GCC 14+** | C23 编译器 | `sudo apt install gcc-14` |
+| **Clang 17+** | 替代编译器 | `sudo apt install clang-17` |
+| **CMake** | 构建系统 | `sudo apt install cmake` |
+| **Ninja** | 快速构建 | `sudo apt install ninja-build` |
+
+### 静态分析工具
+
+```bash
+# 安装分析工具
+sudo apt install cppcheck clang-tidy valgrind
+
+# Clang Static Analyzer
+sudo apt install clang-tools
+
+### 推荐 C 库
+
+#### 🔧 **系统与工具库**
+
+
+
+| 库名 | 功能 | GitHub |
+|------|------|--------|
+| **liburing** | 高性能异步 I/O | [axboe/liburing](https://github.com/axboe/liburing) |
+| **libevent** | 事件驱动网络库 | [libevent/libevent](https://github.com/libevent/libevent) |
+| **libev** | 高性能事件循环 | [enki/libev](https://github.com/enki/libev) |
+| **libuv** | 跨平台异步 I/O | [libuv/libuv](https://github.com/libuv/libuv) |
+
+
+#### 📊 **数据结构与算法**
+
+
+| 库名 | 功能 | GitHub |
+|------|------|--------|
+| **uthash** | 哈希表实现 | [troydhanson/uthash](https://github.com/troydhanson/uthash) |
+| **klib** | 轻量级数据结构 | [attractivechaos/klib](https://github.com/attractivechaos/klib) |
+| **SDS** | 简单动态字符串 | [antirez/sds](https://github.com/antirez/sds) |
+| **cJSON** | JSON 解析库 | [DaveGamble/cJSON](https://github.com/DaveGamble/cJSON) |
+
+
+#### 🧪 **测试框架**
+
+<details>
+<summary>展开查看详细列表</summary>
+
+| 库名 | 特点 | GitHub |
+|------|------|--------|
+| **Unity** | 轻量级单元测试 | [ThrowTheSwitch/Unity](https://github.com/ThrowTheSwitch/Unity) |
+| **Criterion** | 现代测试框架 | [Snaipe/Criterion](https://github.com/Snaipe/Criterion) |
+| **cmocka** | 模拟测试框架 | [clibs/cmocka](https://github.com/clibs/cmocka) |
+| **Greatest** | 头文件测试库 | [silentbicycle/greatest](https://github.com/silentbicycle/greatest) |
+
+</details>
+
+#### 🔒 **安全与加密**
+
+<details>
+<summary>展开查看详细列表</summary>
+
+| 库名 | 功能 | GitHub |
+|------|------|--------|
+| **libsodium** | 现代加密库 | [jedisct1/libsodium](https://github.com/jedisct1/libsodium) |
+| **OpenSSL** | 传统加密库 | [openssl/openssl](https://github.com/openssl/openssl) |
+| **mbedTLS** | 嵌入式加密 | [Mbed-TLS/mbedtls](https://github.com/Mbed-TLS/mbedtls) |
+
+```bash
+# 安装示例
+sudo apt install libsodium-dev libssl-dev libmbedtls-dev
 ```
 
-### 4. 字面量后缀改进
+</details>
 
-支持二进制字面量：
+### IDE 与编辑器配置
 
-```c
-int x = 0b1011; // 11
-```
+#### 🚀 **VS Code 配置**
 
----
+<details>
+<summary>推荐插件与配置</summary>
 
-## 标准库更新
+## 📊 项目统计
 
-### 1. `<stdbool.h>` 增强
+<div align="center">
 
-`true`/`false` 以及 `_Bool` 更加一致，`bool` 现在是关键字。
+![GitHub stars](https://img.shields.io/github/stars/NotfriendAtAll/Modern-C23-learn?style=social)
+![GitHub forks](https://img.shields.io/github/forks/NotfriendAtAll/Modern-C23-learn?style=social)
+![GitHub issues](https://img.shields.io/github/issues/NotfriendAtAll/Modern-C23-learn)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/NotfriendAtAll/Modern-C23-learn)
 
-### 2. 新头文件 `<stdckdint.h>`
+</div>
 
-提供溢出检测的加/减/乘 API：
+## 🤝 Contributing
 
-```c
-#include <stdckdint.h>
-int r;
-if (ckd_add(&r, a, b)) {
-    // 检测到溢出
-}
-```
+我们欢迎所有形式的贡献！请查看 [贡献指南](CONTRIBUTING.md) 了解详情。
 
-### 3. `<uchar.h>` 改进
+### 贡献方式
 
-增强对 Unicode 字符的支持。
+- 🐛 **报告 Bug** - 提交 Issue 描述问题
+- 💡 **功能建议** - 分享你的想法和建议  
+- 📝 **文档改进** - 完善文档和示例
+- 🔧 **代码贡献** - 提交 Pull Request
 
----
+## 📄 许可证
 
-## 类型系统增强
+本项目采用 [GNU General Public License v3.0](LICENSE) 许可证。
 
-### 1. `char8_t` 类型
+## 🔗 参考资源
 
-增加了 `char8_t` 支持 UTF-8 字符：
+### 官方文档
 
-```c
-char8_t utf8str[] = u8"你好";
-```
+- 📘 [ISO/IEC 9899:2023 (C23) 标准草案](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf)
+- 📖 [C23 新特性总结 - cppreference](https://en.cppreference.com/w/c/23)
+- 🔧 [GNU C23 支持情况](https://gcc.gnu.org/gcc-13/changes.html#c)
 
-### 2. 可空类型 (`nullable`)
+### 社区资源
 
-C23 正式引入 _Nullable、_Nonnull 注解（主要用于静态分析）。
-
----
-
-## 预处理器改进
-
-- 支持 `#elifdef` 与 `#elifndef`，增强条件编译表达力。
-- 预处理器算术表达式支持更多运算。
+- 💬 [C 标准委员会邮件列表](https://www.open-std.org/jtc1/sc22/wg14/)
+- 🌐 [Reddit r/C_Programming](https://www.reddit.com/r/C_Programming/)
+- 📺 [YouTube C 编程频道推荐](docs/resources.md#youtube-channels)
 
 ---
 
-## 诊断与静态分析
+<div align="center">
 
-- `_Diagnostic` 属性可用于标记代码警告等。
-- `_Nonnull` 和 `_Nullable` 注解提高代码安全性。
+**🌟 如果这个项目对你有帮助，请给个 Star！**
 
----
+Made with ❤️ by [NotfriendAtAll](https://github.com/NotfriendAtAll)
 
-## 兼容性与移植性
-
-- C23 保持了向后兼容，同时吸收了部分 C++ 特性。
-- 推荐在新项目中使用 C23，老项目可选择性迁移。
-
----
-
-## 参考资料
-
-- [ISO/IEC 9899:2023 (C23) 标准草案](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3096.pdf)
-- [C23 新特性总结](https://en.cppreference.com/w/c/23)
-- [GNU C23 支持情况](https://gcc.gnu.org/gcc-13/changes.html#c)
-
----
-
-> 本文档持续更新，欢迎补充和指正！
+</div>
