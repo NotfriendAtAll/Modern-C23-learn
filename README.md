@@ -73,7 +73,7 @@
 |------|----------|----------|------|
 | **编译器** | GCC 13.0 | GCC 14.2+ | 完整 C23 支持 |
 | **操作系统** | Linux 4.0+ | Ubuntu 22.04+ | x86_64 架构 |
-| **构建工具** | Make 4.0 | Ninja 1.10+ | 高效构建系统 |
+| **构建工具** | CMake 4.0 | Ninja 1.10+ | 高效构建系统 |
 | **调试器** | GDB 10.0 | GDB 14.0+ | 调试支持 |
 
 ## 🚀 Quick Start
@@ -98,19 +98,18 @@ cmake -G Ninja -B build -DCMAKE_BUILD_TYPE=Release
 # 编译
 cmake --build build
 
-# 运行测试
-ctest --test-dir build --output-on-failure
-```
 </details>
 ### 运行示例
 
 ```bash
 # 运行主程序
-./build/modern_c23
+cd Modern-C23-learn/src/src-1
 
 # 运行特定示例
-./build/examples/c23_features
-./build/examples/memory_safety
+cmake -G Ninja -B build 
+cd build
+ninja 
+./modern_c
 ```
 
 ## 📚 学习目录
@@ -159,8 +158,6 @@ sudo apt install clang-tools
 
 #### 🔧 **系统与工具库**
 
-
-
 | 库名 | 功能 | GitHub |
 |------|------|--------|
 | **liburing** | 高性能异步 I/O | [axboe/liburing](https://github.com/axboe/liburing) |
@@ -169,8 +166,7 @@ sudo apt install clang-tools
 | **libuv** | 跨平台异步 I/O | [libuv/libuv](https://github.com/libuv/libuv) |
 
 
-#### 📊 **数据结构与算法**
-
+#### 📊 **算法计算库**
 
 | 库名 | 功能 | GitHub |
 |------|------|--------|
@@ -182,9 +178,6 @@ sudo apt install clang-tools
 
 #### 🧪 **测试框架**
 
-<details>
-<summary>展开查看详细列表</summary>
-
 | 库名 | 特点 | GitHub |
 |------|------|--------|
 | **Unity** | 轻量级单元测试 | [ThrowTheSwitch/Unity](https://github.com/ThrowTheSwitch/Unity) |
@@ -192,12 +185,7 @@ sudo apt install clang-tools
 | **cmocka** | 模拟测试框架 | [clibs/cmocka](https://github.com/clibs/cmocka) |
 | **Greatest** | 头文件测试库 | [silentbicycle/greatest](https://github.com/silentbicycle/greatest) |
 
-</details>
-
 #### 🔒 **安全与加密**
-
-<details>
-<summary>展开查看详细列表</summary>
 
 | 库名 | 功能 | GitHub |
 |------|------|--------|
@@ -210,25 +198,13 @@ sudo apt install clang-tools
 sudo apt install libsodium-dev libssl-dev libmbedtls-dev
 ```
 
-</details>
-
-### IDE 与编辑器配置
-
-#### 🚀 **VS Code 配置**
-
-<details>
-<summary>推荐插件与配置</summary>
-
 ## 📊 项目统计
-
-<div align="center">
 
 ![GitHub stars](https://img.shields.io/github/stars/NotfriendAtAll/Modern-C23-learn?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/NotfriendAtAll/Modern-C23-learn?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/NotfriendAtAll/Modern-C23-learn)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/NotfriendAtAll/Modern-C23-learn)
 
-</div>
 
 ## 🤝 Contributing
 
@@ -261,10 +237,6 @@ sudo apt install libsodium-dev libssl-dev libmbedtls-dev
 
 ---
 
-<div align="center">
-
 **🌟 如果这个项目对你有帮助，请给个 Star！**
 
 Made with ❤️ by [NotfriendAtAll](https://github.com/NotfriendAtAll)
-
-</div>
