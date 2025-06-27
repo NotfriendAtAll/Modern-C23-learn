@@ -1,6 +1,25 @@
 [TOC]
 # C23 新特性 stdalign.h、stddef.h、stdbit.h 说明与实用示例
 
+## 安装safec library
+```bash
+git clone https://github.com/rurban/safeclib.git  # 克隆源码
+cd safeclib
+./build-aux/autogen.sh  # 生成配置脚本
+./configure             # 检查环境并生成Makefile
+make                    # 编译源码
+sudo make install       # 安装到系统目录（默认路径：/usr/local/lib）
+```
+## 安装CMocka
+```bash
+# Ubuntu/Debian
+sudo apt update
+sudo apt install libcmocka-dev  # 安装开发库及头文件
+
+# CentOS/RHEL
+sudo yum install epel-release  # 启用 EPEL 仓库
+sudo yum install cmocka-devel
+```
 本文以如下代码为例，详细讲解 C23 新增及增强的标准库函数/宏：  
 - stdc_bit_width
 - stdc_has_single_bit
@@ -21,40 +40,8 @@ stdc_first_trailing_one,stdc_first_trailing_zero
 stdc_bit_ceil,stdc_count_zeros,stdc_first_leading_one
 stdc_first_leading_zero,stdc_leading_ones
 stdc_leading_zeros,stdc_trailing_ones,stdc_trailing_zeros
-`
-
-## 示例代码[Linux]
-
-```c
-#include <stddef.h>
-#include <stdio.h>
-#include <stdalign.h>
-#include <stdbit.h>
-
-struct ModernC {
-    int value;
-    char array[10];
-    char index;
-};
-
-int main() {
-    size_t res=10;
-    printf("%u\n", stdc_bit_width(res));
-    printf("%u\n", stdc_has_single_bit(res));
-    printf("%u\n", stdc_count_ones(res));
-    printf("%zu\n", stdc_bit_floor(res));
-    printf("\n");
-    printf("%zu\n", offsetof(struct ModernC, value));
-    printf("%zu\n", offsetof(struct ModernC, array));
-    printf("%zu\n", alignof(struct ModernC));
-    return 0;
-}
-```bash
-- 输出结果result: 4,0,2,2,8
-0,4,4
 ```
 ***
-
 ## 详细解释
 
 ### 1. `stdc_bit_width`
@@ -206,8 +193,8 @@ printf("%d %s", num);   // ❌ 错误：缺少第二个参数（字符串）
 ## 关于\n 与 fflush 的关系​
 - ​避免在行尾添加空格，确保数据的一致性和可移植性
 - ​互补性​：\n 是行缓冲的自动触发条件，fflush 是手动强制刷新手段。
-​适用场景​：
-​**\n**​：常规文本行结束（如日志、提示信息）。
+- ​适用场景​：
+​\n ​：常规文本行结束（如日志、提示信息）。
 ​**fflush**​：
 - 进度条（printf("\rProgress: %d%%", i); fflush(stdout);）。
 确保关键数据写入文件（如日志实时持久化）。

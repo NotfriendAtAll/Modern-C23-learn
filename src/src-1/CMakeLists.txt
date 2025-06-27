@@ -11,4 +11,6 @@ set(SOURCES
 )
 
 add_executable(modern_c ${SOURCES})
-target_include_directories(modern_c PRIVATE include)
+target_include_directories(modern_c PRIVATE ${CMAKE_SOURCE_DIR}/include /usr/local/include/safeclib)
+target_link_libraries(modern_c PRIVATE safec)
+
